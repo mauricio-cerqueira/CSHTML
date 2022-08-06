@@ -1,0 +1,25 @@
+﻿<!--Iniciando o arquivo CSHTML-->
+
+<!--Logo abaixo um exemplo de bloco de código C# inserido no arquivo -->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>Meu primeiro CSHTML</title>
+</head>
+<body>
+    <div>
+        <h1>Bem vindo ao meu site! </h1>
+        <!--Sempre que precisar inserir códigos C# no meio do HTML é só inserir um "ARROBA"-->
+        <p>Estamos em @DateTime.Today.ToLongDateString() .</p>
+
+        <p><a href="~/Site/cadastro.cshtml">Realize o cadastro em nosso Site.</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!--Importar as Classes que serão utilizadas-->
+@using WebApplication_C.Classes
+
+<!--Códgo C# inicial-->
+@{
+    Layout = null;
+
+    //Criar um objeto pessoa
+    Pessoa cliente = new Pessoa();
+
+    //Buscar os dados do formulario pelo método POST e inserir no objeto cliente
+    cliente.nome = Request.Form["nome"];
+    cliente.sobrenome = Request.Form["sobrenome"];
+    cliente.email = Request.Form["email"];
+    cliente.municipio = Request.Form["municipio"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>Meu primeiro CSHTML</title>
+</head>
+<body>
+    <div>
+        <!--Sempre que precisar inserir códigos C# no meio do HTML é só inserir um "ARROBA"-->
+        <h1>Bem vindo @cliente.nome @cliente.sobrenome ! </h1>
+        <p>Seu e-mail de cadastro é: @cliente.email.</p>
+        <p>Seu município é @cliente.municipio .</p>
+        <br>
+        <p><a href="~/Site/index.cshtml">Pagina Inicial</a> - <a href="~/Site/cadastro.cshtml">Novo Cadastro</a></p>
+    </div>
+</body>
+</html>
